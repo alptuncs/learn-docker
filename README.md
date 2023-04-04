@@ -29,4 +29,11 @@ Changes made in this folder by the container persists, you can observe the
 changes in host folder. To get the output of cli image running in container in
 host folder set the output as the container folder that is bound to host folder
 
-`docker run --rm -v ${PWD}/host-output:/container-output args -o /container-output`
+`docker run --rm -v ${PWD}/host-output:/container-output args {-output} /container-output`
+
+## Demo
+
+Dockerfile at the root of this repository wraps
+[web-ping](https://github.com/SeriaWei/Ping). You can create a docker
+image from this dockerfile and use this cli in your container by passing 
+`web-ping Web.Ping --host https://github.com/` command as argument.
